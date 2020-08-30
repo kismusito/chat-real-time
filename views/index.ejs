@@ -1,0 +1,31 @@
+<%- include('./partials/header') -%>
+
+<div class="center_container">
+    <div class="chat_container">
+        <div class="sidebar">
+            <div class="brandChat color_white">
+                <span>Messenger</span>
+                <h2 id="userActualRoom"><%= data.userRoom %></h2>
+                <input type="hidden" id="userActualID" value="<%= data.usernameID %>" />
+                <input type="hidden" id="usernameChat" value="<%= data.username %>" />
+            </div>
+            <a href="/" class="leaveRoom">
+                <span>Leave</span>
+            </a>
+        </div>
+        <div class="chat_content">
+            <div id="roomMessages">
+                
+            </div>
+            <div class="buttonSendMessages">
+                <form action="#" id="formSendMessage" method="POST" class="font_width_send">
+                    <input type="text" name="message" id="messageUser" >
+                    <button class="buttonMessage">Send</button>
+                </form>
+                <div id="alertMessage"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') -%>

@@ -1,0 +1,30 @@
+<%- include('./partials/header') -%>
+
+<div class="center_container">
+    <div class="container_header">
+        <span>Messenger</span>
+    </div>
+    <form method="POST" id="form_login" action="/chat" class="form_full_width">
+        <div class="form_group">
+            <label for="usernameID" class="labelText">User ID</label>
+            <input type="text" name="usernameID" id="usernameID" class="form_control" required readonly>
+        </div>
+        <div class="form_group">
+            <label for="username" class="labelText">Username</label>
+            <input type="text" name="username" id="username" class="form_control" required>
+        </div>
+        <div class="form_group">
+            <label for="userRoom" class="labelText">Room</label>
+            <select name="userRoom" id="userRoom" class="form_control" required>
+                <option value="Javascript">Javascript</option>
+                <option value="Java">Java</option>
+            </select>
+        </div>
+
+        <div class="form_group">
+            <button class="btn_login">Sign in</button>
+        </div>
+    </form>
+</div>
+
+<%- include('./partials/footer') -%>
